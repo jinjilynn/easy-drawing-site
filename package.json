@@ -1,0 +1,20 @@
+{
+  "name": "hc-web-app",
+  "version": "1.0.0",
+  "description": "demo",
+  "scripts": {},
+  "author": "jinjilin <jilin.jin@ge.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/runtime": "^7.5.5",
+    "animejs": "~3.0.1",
+    "antd": "~3.20.0",
+    "dva-react-hook": "^1.0.8",
+    "history": "^4.9.0",
+    "moment": "~2.24.0",
+    "react": "~16.8.6",
+    "react-dom": "~16.8.6",
+    "react-router-dom": "^5.0.1",
+    "redbox-react": "~1.6.0"
+  }
+}

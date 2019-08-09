@@ -9,7 +9,7 @@
     "@babel/runtime": "^7.5.5",
     "animejs": "~3.0.1",
     "antd": "~3.20.0",
-    "dva-react-hook": "^1.0.8",
+    "dva-react-hook": "^1.1.6",
     "history": "^4.9.0",
     "moment": "~2.24.0",
     "react": "~16.8.6",

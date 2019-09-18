@@ -6,12 +6,16 @@ import Provider,{ Dynamic } from 'dva-react-hook';
 import Home from './routes/home.js';
 import './index.css';
 const customHistory = createHashHistory();
+const initState = {
+  isIn: false,
+  history: customHistory
+}
 
 function App() {
   return (
-    <Provider>
+    <Provider {...initState}>
         <Router history={customHistory}>
-            <Route path="/" render={(props) => <Dynamic {...props} component={Home} models={() => [import('./models/example.js')]} />} />
+            <Route path="/" render={(props) => <Dynamic {...props} component={Home} />} />
         </Router>
     </Provider>
   );

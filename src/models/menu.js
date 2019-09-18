@@ -1,5 +1,5 @@
 export default {
-    name:'isIn',
+    name:'menu',
     init:false,
     effects:{
         

@@ -1,0 +1,59 @@
+.sider-container{
+    width:100%;
+    position:relative;
+    padding:1em 0 1em;
+    background:#fff;
+    border-radius:~'calc(30vw / 10)';
+    color:rgb(50,50,50);
+    overflow: hidden;
+    ul{
+        li{
+            padding:0 1em;
+            height:2em;
+            display:flex;
+            align-items:center;
+            justify-content: flex-start;
+            cursor:pointer;
+            &:hover{
+                color:#ffffff;
+            }
+            i{
+                font-size:1.5em;
+                //color:rgb(50,50,50);
+            }
+            .menu-text{
+                margin-left:1em;
+                //color:rgb(50,50,50);
+                animation-fill-mode: both;
+                animation: fly-in .4s ease-out;
+                @keyframes fly-in {
+                    from{
+                        transform: translateX(100%);
+                    }
+                    to{
+                        transform: translateX(0%);
+                    }
+                }
+            }
+            margin-bottom:1.5em;
+            
+        }
+    }
+    .out-in-button{
+        color:rgb(50,50,50);
+        font-size:.8em;
+        position:absolute;
+        height:3em;
+        width:100%;
+        bottom:0em;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-top:1px solid #fff;
+        cursor:pointer;
+        &:hover{
+            color:rgb(150,150,150);
+        }
+    }
+}

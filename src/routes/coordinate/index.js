@@ -40,14 +40,14 @@ function Preface() {
             In this component, all the points we use are longitude and latitude coordinates.
             <br />
             Its format is like this
-            <Highlight className="rainbow">
+            <Highlight className="tomorrow-night-blue">
                 const point = [longitude,latitude]
             </Highlight>
             As you can see, each point is an array of two elements, and the first element of the array is longitude, and the second element of the array is latitude.
             <br />
             <br />
             So it may be like this
-            <Highlight className="rainbow">
+            <Highlight className="tomorrow-night-blue">
                 <div style={{ whiteSpace: 'pre' }}>
                     {`
                         const us_office = [
@@ -75,7 +75,7 @@ function Preface() {
             <br />
             <br />
             Now you have a set of outline coordinates of the U.S. Office of Personnel Management and a person's position.You can simply draw them all out, let's have a try
-            <Highlight className="rainbow">
+            <Highlight className="tomorrow-night-blue">
                 {`
                         import ReactDOM from 'react-dom';
                         import EasyDrawing from 'easy-drawing';

@@ -1,7 +1,5 @@
 @import url('./assets/fonts/iconfont.css');
-@import url('./assets/theme/ocean.css');
-@import url('./assets/theme/rainbow.css');
-@import url('./assets/theme/a11y-light.css');
+@import url('./assets/theme/tomorrow-night-blue.css');
 
 html, body,#root {
   height: 100%;

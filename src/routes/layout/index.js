@@ -11,10 +11,10 @@ function Layout(props) {
             <span>Easy Drawing</span>
         </div>
         <div className={Style['content-container']}>
-            <div style={{ width: `${menuShink ? '5em' : '20%'}` }} className={Style['sider']}>
+            <div style={{ width: `${menuShink ? '6em' : '20%'}` }} className={Style['sider']}>
                 <Menu itemList={props.menu} />
             </div>
-            <div style={{ width: `${menuShink ? 'calc(100% - 5em)' : '80%'}` }} className={Style['content']}>
+            <div style={{ width: `${menuShink ? 'calc(100% - 6em)' : '80%'}` }} className={Style['content']}>
                 {
                     props.children
                 }

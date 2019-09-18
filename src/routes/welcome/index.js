@@ -34,9 +34,9 @@ function Welcome() {
             setHasIn(true);
         };
         return <div ref={welcome} className={style['welcome-container']} >
-            <i className={`${style['welcome-logo']} ge-iconfont ge-logo`} />
-            <span className={style['welcome-text']} >General Electric</span>
-            <span onClick={goIn} className={style['enter-text']}>点击进入</span>
+            <i className={`${style['welcome-logo']} ge-iconfont ge-diqiu`} />
+            <span className={style['welcome-text']} >Easy Drawing</span>
+            <span onClick={goIn} className={style['enter-text']}>Enter</span>
             <div className={style['anime-click']}>
                 <Canvas ref={canvas} />
             </div>

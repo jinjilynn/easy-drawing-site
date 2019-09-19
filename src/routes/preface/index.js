@@ -17,6 +17,10 @@ function Preface() {
             So you can pick up a set of coordinate points of a graph that you see or in your mind on  
              <a href="https://www.google.com/maps">Google maps </a>
              With these points, you can draw the corresponding graphics.
+             <br />
+             <br />
+             <red>The first thing that should be emphasized is:</red>
+             <em>This component is positioned relative to the parent element and is full of parent elements,so the parent element is best or should set the position property to non-static and provide values for width and height</em>
         </div>
     </Card>
 }

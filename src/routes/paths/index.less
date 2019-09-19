@@ -1,0 +1,56 @@
+.container{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: auto;
+    em{
+        font-weight: bold;
+    }
+    h1{
+        font-size:3em;
+    }
+    span{
+        margin-right:2em;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;     
+    }
+    &::-webkit-scrollbar-thumb {
+          border-radius: 2px 2px;
+          box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+          background: rgba(24,144,255,0.6);
+    }
+    &::-webkit-scrollbar-track {
+          border-radius: 2px 2px;
+          background: rgba(0,0,0,0,0);
+    }
+}
+.tip{
+    width:15em;
+    height:5em;
+    background:rgba(50,50,50,0.5);
+    display:none;
+    span:first-child{
+        display: inline-block;
+        width:5em;
+        height:5em;
+        background-image: url('../../assets/imgs/office.png');
+        background-size:cover;
+        background-repeat: no-repeat;
+        margin:0;
+    }
+    span:nth-child(2){
+        float:right;
+        width:10em;
+        height:5em;
+        em{
+            display: flex;
+            width:100%;
+            height:100%;
+            justify-content: center;
+            align-items:center;
+            color:#fff;
+        }
+        margin:0;
+    }
+}

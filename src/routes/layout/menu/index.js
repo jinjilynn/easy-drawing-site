@@ -16,11 +16,6 @@ function Menu(props) {
                 history.push(path)
             }
         }
-        useEffect(() => {
-            // const w = window.getComputedStyle(container.current).width; 
-            // container.current.style.borderRadius = `${parseFloat(w) / 10}px`;
-            //container.current.style.padding = `${parseFloat(w) / 2}px 0`;
-        },[])
         return <div ref={container} className={Style['sider-container']}>
             <ul>
                 {

@@ -31,7 +31,7 @@ const pro = {
                     loader: 'url-loader',
                     options: {
                         name: 'imgs/[name]_[hash].[ext]',
-                        limit: 20480
+                        limit: 10240
                     }
                 }
             },

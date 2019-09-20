@@ -85,7 +85,7 @@ function Areas(props) {
         [-77.044393,38.894600],
         [-77.044402,38.894451],
         [-77.044682,38.894442]
-    ],// graphic outline
+    ],// graphic outline, connecting these points in sequence to form a closed loop
     fillStyle: 'color',  // color filled
     strokeStyle: 'color' // color stroked,
     shadowColor: 'color' // shadow color     

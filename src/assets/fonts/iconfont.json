@@ -188,6 +188,13 @@
       "unicode_decimal": 59190
     },
     {
+      "icon_id": "1213275",
+      "name": "前言",
+      "font_class": "qianyan",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
       "icon_id": "1238337",
       "name": "date",
       "font_class": "date",
@@ -314,6 +321,13 @@
       "unicode_decimal": 58904
     },
     {
+      "icon_id": "3248869",
+      "name": "area",
+      "font_class": "area",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
       "icon_id": "3640197",
       "name": "问号",
       "font_class": "wenhao",
@@ -335,6 +349,13 @@
       "unicode_decimal": 59279
     },
     {
+      "icon_id": "4575196",
+      "name": "坐标",
+      "font_class": "zuobiao",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
       "icon_id": "4766298",
       "name": "line chart",
       "font_class": "line",
@@ -347,6 +368,13 @@
       "font_class": "bar",
       "unicode": "e7b0",
       "unicode_decimal": 59312
+    },
+    {
+      "icon_id": "4822740",
+      "name": "迷宫",
+      "font_class": "migong",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
     },
     {
       "icon_id": "4945134",
@@ -564,6 +592,13 @@
       "font_class": "repaire",
       "unicode": "e627",
       "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "7534923",
+      "name": "scatter",
+      "font_class": "scatter",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
     },
     {
       "icon_id": "8288812",

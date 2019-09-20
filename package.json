@@ -9,12 +9,15 @@
     "animejs": "~3.0.1",
     "antd": "^3.23.3",
     "dva-react-hook": "^1.2.2",
-    "easy-drawing": "^1.0.8",
+    "easy-drawing": "^1.1.1",
     "history": "^4.9.0",
     "react": "~16.8.6",
     "react-dom": "~16.8.6",
     "react-highlight": "^0.12.0",
     "react-router-dom": "^5.0.1",
     "redbox-react": "~1.6.0"
+  },
+  "dependencies": {
+    "svg-path-bounding-box": "^1.0.4"
   }
 }

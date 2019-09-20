@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useModel } from 'dva-react-hook';
 import Menu from './menu'
 import Style from './index.less'
 
 function Layout(props) {
     const [{ value: menuShink }, setMenuShink] = useModel('menuShink');
+    useEffect(() => {
+        const width = window.innerWidth;
+        if (width < 1200) setMenuShink(true)
+    }, [])
     return <div className={Style['layout-container']}>
         <div className={Style['header']}>
             <i className="ge-iconfont ge-diqiu" />

@@ -39,6 +39,7 @@ function Preface() {
         <div className={style['container']}>
             In this component, all the points we use are longitude and latitude coordinates.
             <br />
+            <br />
             Its format is like this
             <Highlight >
                 const point = [longitude,latitude]
@@ -66,13 +67,16 @@ function Preface() {
                         const person = [-77.044190,38.894836]
                     `}
             </Highlight>
-            It's important to note here that the coordinate format you pick up on google maps is [latitude,longitude],so before you pass this set of coordinates into the component, you need to call  ‘Array.prototype.reverse()’  to format it
+            <red>It's important to note</red> here that the coordinate format you pick up on google maps is [latitude,longitude],so before you pass this set of coordinates into the component, you need to call  <green>‘Array.prototype.reverse()’</green>  to format it
+            <br />
+            <br />
+            Now let's do something
             <br />
             <br />
             <img src={example} />
             <br />
             <br />
-            Now you have a set of outline coordinates of the U.S. Office of Personnel Management and a person's position.You can simply draw them all out, let's have a try
+            now that you have a set of outline coordinates of the U.S. Office of Personnel Management and a person's position, so you can simply draw them all out
 
 
             <Highlight >

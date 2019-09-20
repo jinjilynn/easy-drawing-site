@@ -20,7 +20,7 @@ function Preface() {
              <br />
              <br />
              <red>The first thing that should be emphasized is:</red>
-             <em>This component is positioned relative to the parent element and is full of parent elements,so the parent element is best or should set the position property to non-static and provide values for width and height</em>
+             <em>This component is positioned relative to the parent element and is full of parent elements,so the parent element is best or should be set the position property to non-static and provide values for width and height</em>
         </div>
     </Card>
 }

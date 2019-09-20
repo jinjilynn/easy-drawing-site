@@ -7,9 +7,9 @@
   "license": "MIT",
   "devDependencies": {
     "animejs": "~3.0.1",
-    "antd": "~3.20.0",
+    "antd": "^3.23.3",
     "dva-react-hook": "^1.2.2",
-    "easy-drawing": "^1.0.4",
+    "easy-drawing": "^1.0.8",
     "history": "^4.9.0",
     "react": "~16.8.6",
     "react-dom": "~16.8.6",

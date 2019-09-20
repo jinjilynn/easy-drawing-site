@@ -53,23 +53,23 @@ function Areas(props) {
             They are responsible for rendering graphics, discrete symbols, and dynamic paths.
             <br />
             <br />
-            The areas are responsible for the rendering of various graphics. It determines the coordinate system used by the other two props, so you can just render the areas, but not just the sactters or paths.
+            The areas prop is responsible for the rendering of various graphics. <red>It determines the coordinate system used by the other two props, so you can just render the areas, but can not just render the sactters or paths.</red>
             <br />
             <br />
-            Let's take a look at the complete areas data format
+            Let's take a look at the complete areas element format
             <Highlight>
 {`{
     mouseClick: (e) => {
-        // e is like this: { x, y, screenX, screenY }  x y represents the offset from the parent element, screenX, screenY represents the offset from the screen
-    },      //triggered when the mouse clicks
+        // e is like this: { x, y, screenX, screenY }  x or y represents the offset from the parent element, and screenX or screenY represents the offset from the screen
+    }, //triggered when the mouse clicks
     mouseOver: {
-        fillStyle: 'color',      //color filled when the mouse is hovering over it 
+        fillStyle: 'color', //color filled when the mouse is hovering over it 
         moveIn: (e) => {
             // e is the same as mouseClick's
-        },      //triggered when the mouse enters
+        }, //triggered when the mouse enters
         moveOut: () => {
 
-        }      //Triggered when the mouse enters
+        } //Triggered when the mouse leaves
     },
     name: { text: 'string',// displayed in the center of the graph  fontSize:'[string || 12px]', show: [boolean || true] },
     polygon: [
@@ -88,9 +88,9 @@ function Areas(props) {
     ],// graphic outline
     fillStyle: 'color',  // color filled
     strokeStyle: 'color' // color stroked,
-    shadowColor: 'color'               
+    shadowColor: 'color' // shadow color     
 }`}</Highlight>
-            All the attributes in the above data structure are optional, and the worst result is nothing.
+            All the attributes in the above are optional
             <br />
             <br />
             Now,let's do something interesting: the popup layer will be displayed when the mouse  moves in.
@@ -99,14 +99,13 @@ function Areas(props) {
                     <span></span>
                     <span><em>U.S. Office</em></span>
                 </div>
-                <EasyDrawing areas={[office]} scatters={[person]} />,
+                <EasyDrawing areas={[office]} scatters={[person]} />
             </div>
             Code may like this
             <Highlight>
 {`const office = {
     mouseOver: {
         fillStyle: '#f1a271',
-        strokeStyle: 'blue',
         moveIn: (e) => {
             tip.current.style.cssText = 'position:absolute;top:' + e.y + 'px;left:' + e.x + 'px;z-index:9999;display:block;'
         },

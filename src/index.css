@@ -8,7 +8,6 @@ html, body,#root {
   margin:0;
   overflow: hidden;
   font-size:2vmin;
-  user-select: none;
 }
 ul,ul li{
   list-style: none;

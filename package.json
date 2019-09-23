@@ -9,7 +9,7 @@
     "animejs": "~3.0.1",
     "antd": "^3.23.3",
     "dva-react-hook": "^1.2.2",
-    "easy-drawing": "^1.1.5",
+    "easy-drawing": "^1.1.7",
     "history": "^4.9.0",
     "react": "~16.8.6",
     "react-dom": "~16.8.6",

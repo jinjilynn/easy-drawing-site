@@ -49,8 +49,8 @@ function Areas(props) {
     return <Card>
         <div className={style['container']}>
             <h1>areas</h1>
-            This component receives three props: <em>areas</em>、<em>scatters</em>、<em>paths</em>, and each props is an Array type.
-            They are responsible for rendering graphics, discrete symbols, and dynamic paths.
+            This component receives four props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>, and each props is an Array type.
+            They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
             <br />
             <br />
             The areas prop is responsible for the rendering of various graphics. <red>It determines the coordinate system used by the other two props, so you can just render the areas, but can not just render the sactters or paths.</red>

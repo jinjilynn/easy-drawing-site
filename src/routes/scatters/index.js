@@ -45,8 +45,8 @@ function Scatters(props) {
     return <Card>
         <div className={style['container']}>
             <h1>scatters</h1>
-            This component receives three props: <em>areas</em>、<em>scatters</em>、<em>paths</em>, and each props is an Array type.
-            They are responsible for rendering graphics, discrete symbols, and dynamic paths.
+            This component receives four props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>, and each props is an Array type.
+            They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
             <br />
             <br />
             The scatters is responsible for rendering discrete symbols in the canvas, <red>you can't just render scatters without rendering areas</red>

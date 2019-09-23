@@ -120,7 +120,7 @@ const dev = {
         watchContentBase: true,
         historyApiFallback: true,
         open: true,
-        port: 3000,
+        port: 3001,
         proxy: {
             '/gateway': {
                 target: 'http://apm.hcdigital.com.cn:8090',

@@ -4,6 +4,7 @@ import Coordinate from '../routes/coordinate';
 import Areas from '../routes/areas';
 import Scatters from '../routes/scatters';
 import Paths from '../routes/paths';
+import ZIndex from '../routes/zindex';
 
 export default [
     {
@@ -39,6 +40,13 @@ export default [
         icon:'ge-migong',
         path:'/paths',
         component: <Paths />,
+        models:null
+    },
+    {
+        name:'zIndex',
+        icon:'ge-zindex',
+        path:'/z-index',
+        component: <ZIndex />,
         models:null
     }
 ]

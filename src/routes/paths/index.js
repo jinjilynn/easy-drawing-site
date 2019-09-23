@@ -52,8 +52,8 @@ function Paths(props) {
     return <Card>
         <div className={style['container']}>
             <h1>paths</h1>
-            This component receives three props: <em>areas</em>、<em>scatters</em>、<em>paths</em>, and each props is an Array type.
-            They are responsible for rendering graphics, discrete symbols, and dynamic paths.
+            This component receives four props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>, and each props is an Array type.
+            They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
             <br />
             <br />
             The paths prop is responsible for the rendering of dynamic paths, <red>you can't just render paths without rendering areas</red>

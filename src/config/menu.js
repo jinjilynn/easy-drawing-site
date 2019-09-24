@@ -5,6 +5,7 @@ import Areas from '../routes/areas';
 import Scatters from '../routes/scatters';
 import Paths from '../routes/paths';
 import ZIndex from '../routes/zindex';
+import Size from '../routes/size';
 
 export default [
     {
@@ -47,6 +48,13 @@ export default [
         icon:'ge-zindex',
         path:'/z-index',
         component: <ZIndex />,
+        models:null
+    },
+    {
+        name:'size',
+        icon:'ge-quanping',
+        path:'/size',
+        component: <Size />,
         models:null
     }
 ]

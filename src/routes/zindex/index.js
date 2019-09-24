@@ -43,7 +43,12 @@ function ZIndex(props) {
     return <Card>
         <div className={style['container']}>
             <h1>zIndex</h1>
-            This component receives four props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>, and each props is an Array type.
+            This component receives five props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>、<em>size</em>.
+            <br />
+            <br />
+            <em>areas</em>、<em>scatters</em> and <em>paths</em> are Array types, <em>zIndex</em> is Object type and <em>size</em> is String type.
+            <br />
+            <br />
             They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
             <br />
             <br />

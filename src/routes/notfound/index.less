@@ -1,12 +1,33 @@
 .not-found{
-    width:40em;
-    height:40em;
-    position:absolute;
-    top:45%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    width:100%;
+    height:100%;
+    position:relative;
     display:flex;
-    justify-content: center;
-    align-items:center;
-    background:rgba(66,80,135,.1);
+    justify-content: space-around;
+    align-items: center;
+    .map{
+        width:35vw;
+        height:35vw;
+        position:relative;
+        border-radius:1em;
+        background:rgba(40,40,40,1);
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .chart{
+        width:35vw;
+        height:35vw;
+        position:relative;
+        border-radius:1em;
+        background:rgba(40,40,40,1);
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        color:#fff;
+    }
 }

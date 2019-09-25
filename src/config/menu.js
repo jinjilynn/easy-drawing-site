@@ -6,6 +6,7 @@ import Scatters from '../routes/scatters';
 import Paths from '../routes/paths';
 import ZIndex from '../routes/zindex';
 import Size from '../routes/size';
+import Texts from '../routes/texts';
 
 export default [
     {
@@ -41,6 +42,13 @@ export default [
         icon:'ge-migong',
         path:'/paths',
         component: <Paths />,
+        models:null
+    },
+    {
+        name:'texts',
+        icon:'ge-pen',
+        path:'/textx',
+        component: <Texts />,
         models:null
     },
     {

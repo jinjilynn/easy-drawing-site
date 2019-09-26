@@ -5,6 +5,7 @@ import { convertToNum, convertToTime, colors } from './tool';
 
 function ShutdownTime(props) {
     const container = useRef(null);
+    const [size, setSize] = useState('cover')
     const [option, setOption] = useState({});
     const lon1 = 116.172003;
     const lon2 = 116.726761;
@@ -39,8 +40,8 @@ function ShutdownTime(props) {
         scatters.push({
             point: xTop,
             path: {
-                scale: 0.04,
-                color: 'rgb(100,100,100)',
+                scale: 0.03,
+                color: 'rgb(180,180,180)',
                 d: "M786.0224 469.4016a49.7664 49.7664 0 0 1 0 85.1968L289.1776 852.5824a49.5616 49.5616 0 0 1-75.1616-42.5984v-595.968a49.5616 49.5616 0 0 1 75.1616-42.5984l496.8448 297.984z"
             }
         })
@@ -49,9 +50,9 @@ function ShutdownTime(props) {
         scatters.push({
             point: yTop,
             path: {
-                scale: 0.04,
+                scale: 0.03,
                 rotate: -90,
-                color: 'rgb(100,100,100)',
+                color: 'rgb(180,180,180)',
                 d: "M786.0224 469.4016a49.7664 49.7664 0 0 1 0 85.1968L289.1776 852.5824a49.5616 49.5616 0 0 1-75.1616-42.5984v-595.968a49.5616 49.5616 0 0 1 75.1616-42.5984l496.8448 297.984z"
             }
         })
@@ -62,8 +63,8 @@ function ShutdownTime(props) {
                 originPoint,
                 xTop
             ],
-            width: 3,
-            color: 'rgb(100,100,100)',
+            width: 2.5,
+            color: 'rgb(180,180,180)',
             animation: 'normal',
         })
 
@@ -73,8 +74,8 @@ function ShutdownTime(props) {
                 originPoint,
                 yTop
             ],
-            width: 3,
-            color: 'rgb(100,100,100)',
+            width: 2.5,
+            color: 'rgb(180,180,180)',
             animation: 'normal',
         })
 
@@ -101,11 +102,11 @@ function ShutdownTime(props) {
         }
 
         const data = [
-            ['12:24:30', '18:23:12', '20:34:59', '16:01:20', '21:13:13', '22:45:43', '17:35:45'],
-            ['12:24:30', '18:23:12', '20:34:59', '16:01:20', '21:13:13', '22:45:43', '17:35:45'],
-            ['12:24:30', '18:23:12', '17:34:59', '16:01:20', '21:13:13', '22:45:43', '17:35:45'],
-            ['12:24:30', '18:23:12', '20:34:59', '16:01:20', '21:13:13', '22:45:43', '17:35:45'],
-            ['12:24:30', '15:23:12', '20:34:59', '16:01:20', '21:13:13', '22:45:43', '17:35:45']
+            ['18:21:12', '18:33:12', '18:23:12', '16:11:20', '19:13:13', '18:23:12', '17:35:45'],
+            ['18:33:12', '18:43:12', '18:23:12', '16:01:10', '19:13:13', '18:23:12', '17:35:45'],
+            ['18:43:12', '18:53:12', '18:23:12', '16:31:20', '19:13:13', '18:23:12', '17:35:45'],
+            ['18:53:12', '18:13:12', '18:23:12', '16:21:20', '21:13:13', '18:23:12', '17:35:45'],
+            ['18:03:12', '18:03:12', '18:23:12', '16:41:05', '20:13:13', '18:23:12', '17:35:45']
         ]
 
         let xspan = 0;
@@ -121,13 +122,13 @@ function ShutdownTime(props) {
                 const y2 = lat2 * 1.0004
                 texts.push({
                     point: [x * 1.0003, y],
-                    size: '1em',
+                    size: '.5em',
                     text: it,
                     color: '#fff'
                 });
                 texts.push({
                     point: [x, y2],
-                    size: '1em',
+                    size: '.5em',
                     text: it,
                     color: '#fff'
                 });
@@ -143,40 +144,72 @@ function ShutdownTime(props) {
         let maxValue = null;
         let minValue = null;
         const vbottom = 1.002 * lat2;
-        const vtop = 0.998 * lat1;
-        if(yAxis .type === 'time' && xAxis.type === 'grouping'){
+        const vtop = 0.9985 * lat1;
+        if (yAxis.type === 'time' && xAxis.type === 'grouping') {
             data.forEach(it => {
                 it.forEach(item => {
                     const time = convertToNum(item);
-                    maxValue === null ? (maxValue = time) : (maxValue = Math.max(maxValue,time));
-                    minValue === null ? (minValue = time) : (minValue = Math.min(minValue,time));
+                    maxValue === null ? (maxValue = time) : (maxValue = Math.max(maxValue, time));
+                    minValue === null ? (minValue = time) : (minValue = Math.min(minValue, time));
                 })
             });
-            data.forEach((it,index) => {
+            data.forEach((it, index) => {
                 const lonspan = xspan / it.length;
-                it.forEach((item,itemIndex) => {
+                it.forEach((item, itemIndex) => {
                     const time = convertToNum(item);
                     const span = time - minValue;
                     const percent = span / (maxValue - minValue);
-                    const lat = ( vtop -  vbottom) * percent + vbottom;
+                    const lat = (vtop - vbottom) * percent + vbottom;
                     const lon = lonspan * (itemIndex + 1) + lon1 + xspan * index;
                     scatters.push({
-                        point: [lon,lat],
+                        point: [lon, lat],
                         color: colors[index],
                         size: props.fontSize * 0.25,
                         mode: 'static'
                     })
                 })
             });
-
         }
+
+        //add value to yAxis
+        texts.push({
+            point: [lon1 * 0.9999, vbottom],
+            size: '.5em',
+            text: convertToTime(minValue),
+            color: '#fff',
+            align: 'right'
+        })
+        texts.push({
+            point: [lon1 * 0.9999, vtop],
+            size: '.5em',
+            text: convertToTime(maxValue),
+            color: '#fff',
+            align: 'right'
+        })
+        texts.push({
+            point: [lon1 * 0.9999, (vtop + vbottom) / 2],
+            size: '.5em',
+            text: convertToTime((maxValue + minValue) / 2),
+            color: '#fff',
+            align: 'right'
+        })
+        paths.push({
+            points: [
+                [lon1, (vtop + vbottom) / 2],
+                [lon2, (vtop + vbottom) / 2]
+            ],
+            width: 1,
+            color: 'rgb(210,210,210)',
+            animation: 'normal',
+        })
 
 
         setOption({ areas, texts, scatters, paths })
+        setSize(width >= height * 1.3 ? 'cover' : 'none')
 
     }, [props.fontSize])
     return <div ref={container} style={{ width: '100%', height: '100%', position: 'relative' }}>
-        <EasyDrawing  areas={option.areas} texts={option.texts} scatters={option.scatters} paths={option.paths} />
+        <EasyDrawing size={size} areas={option.areas} texts={option.texts} scatters={option.scatters} paths={option.paths} />
     </div>
 
 }

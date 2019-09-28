@@ -32,7 +32,7 @@ function ZIndex(props) {
         text: 'easy-drawing',
         point: [-77.04437, 38.894796],
         color: 'black',
-        size:'2em'
+        size:'.5em'
     }
     return <Card>
         <div className={style['container']}>
@@ -65,7 +65,7 @@ const text = {
     text: 'easy-drawing',
     point: [-77.04437, 38.894796],
     color: 'black',
-    size:'2em'
+    size:'.5em'
 }
                 `}
             </Highlight>

@@ -47,7 +47,7 @@ export default [
     {
         name:'texts',
         icon:'ge-pen',
-        path:'/textx',
+        path:'/texts',
         component: <Texts />,
         models:null
     },

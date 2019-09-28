@@ -8,7 +8,8 @@ import './index.css';
 const customHistory = createHashHistory();
 const initState = {
   isIn: false,
-  history: customHistory
+  history: customHistory,
+  lang:'en'
 }
 
 function App() {

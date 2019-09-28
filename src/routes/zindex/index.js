@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { useModel } from 'dva-react-hook';
 import Highlight from 'react-highlight';
 import EasyDrawing from 'easy-drawing';
 import Card from '../../components/card';
 import style from './index.less';
 
 function ZIndex(props) {
+    const [{ value: lang }] = useModel('lang');
     const office = {
         polygon: [
             [-77.044688, 38.895265],
@@ -41,44 +43,86 @@ function ZIndex(props) {
         animation: 'normal'
     }
     return <Card>
-        <div className={style['container']}>
-            <h1>zIndex</h1>
-            This component receives five props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>、<em>size</em>.
+        {
+            lang === 'en' &&
+            <div className={style['container']}>
+                <h1>zIndex</h1>
+                This component receives five props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>zIndex</em>、<em>size</em>.
             <br />
+                <br />
+                <em>areas</em>、<em>scatters</em> and <em>paths</em> are Array types, <em>zIndex</em> is Object type and <em>size</em> is String type.
             <br />
-            <em>areas</em>、<em>scatters</em> and <em>paths</em> are Array types, <em>zIndex</em> is Object type and <em>size</em> is String type.
+                <br />
+                They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
             <br />
+                <br />
+                The zIndex is responsible for setting z-index of them. By default, the z-index value of paths is 2, the z-index value of areas is 1, the z-index value of scatters is 3,the z-index value of texts is 10
             <br />
-            They are responsible for rendering graphics, discrete symbols, dynamic paths and setting z-index of them.
-            <br />
-            <br />
-            The zIndex is responsible for setting z-index of them. By default, the z-index value of paths is 2, the z-index value of areas is 1, the z-index value of scatters is 3  
-            <br />
-            <br />
-            Let's take a look at the complete zIndex format
+                <br />
+                Let's take a look at the complete zIndex format
             <Highlight>
-                {`
+                    {`
 {   
     areas: num,  //optional
     scatters: num,  //optional
     paths: num  //optional
 }
                 `}
-            </Highlight>
-            you can see the difference when i set the zIndex property
+                </Highlight>
+                you can see the difference when i set the zIndex property
             <Highlight>
-                {`<EasyDrawing areas={[office]} paths={[linep2]}  />`}
-            </Highlight>
-            <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
-                <EasyDrawing areas={[office]} paths={[linep2]} />
-            </div>
+                    {`<EasyDrawing areas={[office]} paths={[linep2]}  />`}
+                </Highlight>
+                <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
+                    <EasyDrawing areas={[office]} paths={[linep2]} />
+                </div>
+                <Highlight>
+                    {` <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{paths:5}} />`}
+                </Highlight>
+                <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
+                    <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{ paths: 5 }} />
+                </div>
+            </div>}
+        {
+            lang === 'zh' &&
+            <div className={style['container']}>
+                <h1>zIndex</h1>
+                这个组件一共接收6个props属性: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>texts</em>、<em>zIndex</em>、<em>size</em>.
+            <br />
+                <br />
+                <em>areas</em>、<em>scatters</em>、<em>texts</em> and <em>paths</em> 是Array类型, <em>zIndex</em> 是Object类型, <em>size</em> 是一个字符串.
+            <br />
+                <br />
+                它们分别负责渲染图形、符号、路径、文本、设置层叠关系和地图的size模式
+            <br />
+                <br />
+                zIndex是负责组织areas、scatters、paths、texts的层叠关系的, 默认情况下， paths的z-index是2, areas的z-index是1, scatters的z-index是3,texts的z-index是10
+                <br />
+                <br />
+                下面是zIndex的完整数据格式
             <Highlight>
-                {` <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{paths:5}} />`}
-            </Highlight>
-            <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
-                <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{paths:5}} />
-            </div>
-        </div>
+                    {`
+{   
+    areas: num,  //optional
+    scatters: num,  //optional
+    paths: num  //optional
+}
+                `}
+                </Highlight>
+                下面可以看出设置了不同zIndex的不同
+            <Highlight>
+                    {`<EasyDrawing areas={[office]} paths={[linep2]}  />`}
+                </Highlight>
+                <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
+                    <EasyDrawing areas={[office]} paths={[linep2]} />
+                </div>
+                <Highlight>
+                    {` <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{paths:5}} />`}
+                </Highlight>
+                <div style={{ marginTop: '1em', height: '30em', width: '30em', position: 'relative', background: '#f1f3f5' }}>
+                    <EasyDrawing areas={[office]} paths={[linep2]} zIndex={{ paths: 5 }} />
+                </div>
+            </div>}
     </Card>
 }
 

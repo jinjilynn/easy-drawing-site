@@ -25,7 +25,7 @@ export const convertToTime = function (num) {
         var hour = parseInt(num / 3600).toString().length === 1 ? '0' + parseInt(num / 3600).toString() : parseInt(num / 3600).toString();
         var minute = num % 3600;
         var min = parseInt(minute / 60).toString().length === 1 ? '0' + parseInt(minute / 60).toString() : parseInt(minute / 60).toString();
-        var sec = (minute % 60).toString().length === 1 ? '0' + (minute % 60).toString() : (minute % 60).toString();
+        var sec = (minute % 60).toString().length === 1 ? '0' + Math.round(minute % 60).toString() : Math.round(minute % 60).toString();
         result = hour + ':' + min + ':' + sec;
 
     }

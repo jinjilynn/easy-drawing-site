@@ -411,6 +411,7 @@ export const scatterBld1 = {
     name: '10号楼',
     point: [121.474422, 31.218451],
     color: '#FF8A8A',
+    mode:'static',
     path: {
         draw: 'fill',
         scale: 0.03,
@@ -423,7 +424,8 @@ export const scatterBld2 = {
     name: '9号楼',
     point: [121.474858, 31.218287],
     color: '#f0ff00',
-    size: 10
+    size: 10,
+    mode:'static'
 }
 
 //急诊楼
@@ -441,12 +443,14 @@ export const scatterBld3 = {
 export const scatterBld4 = {
     name: '门诊楼',
     point: [121.472769, 31.216793],
-    color: 'rgba(52,168,83,1)'
+    color: 'rgba(52,168,83,1)',
+    mode:'static'
 }
 
 //3号楼
 export const scatterBld5 = {
     name: '3号楼',
     point: [121.473102, 31.218975],
-    color: '#DD7DC1'
+    color: '#DD7DC1',
+    mode:'static'
 }

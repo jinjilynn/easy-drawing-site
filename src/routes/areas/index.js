@@ -141,6 +141,11 @@ function Areas(props) {
     strokeStyle: 'gray'
 }
 `}</Highlight>
+<Highlight>
+    {`
+ <EasyDrawing areas={[office]} scatters={[person]} />
+    `}
+</Highlight>
             </div>
         }
         {
@@ -150,7 +155,7 @@ function Areas(props) {
                 这个组件一共接收6个props属性: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>texts</em>、<em>zIndex</em>、<em>size</em>.
             <br />
                 <br />
-                <em>areas</em>、<em>scatters</em>、<em>texts</em> and <em>paths</em> 是Array类型, <em>zIndex</em> 是Object类型, <em>size</em> 是一个字符串.
+                <em>areas</em>、<em>scatters</em>、<em>texts</em> 和 <em>paths</em> 是Array类型, <em>zIndex</em> 是Object类型, <em>size</em> 是一个字符串.
             <br />
                 <br />
                 它们分别负责渲染图形、符号、路径、文本、设置层叠关系和地图的size模式
@@ -174,7 +179,11 @@ function Areas(props) {
 
         } //鼠标离开事件
     },
-    name: { text: 'string',// 渲染在图形中点的文本 fontSize:'[string || 12px]',//文本字体大小 show: [boolean || true]//文本是否显示 },
+    name: { 
+        text: 'string',// 渲染在图形中点的文本 
+        fontSize:'[string || 12px]',//文本字体大小 
+        show: [boolean || true]//文本是否显示 
+    },
     polygon: [
         [-77.044688,38.895265],
         [-77.044399,38.895260],
@@ -237,6 +246,11 @@ function Areas(props) {
     strokeStyle: 'gray'
 }
 `}</Highlight>
+<Highlight>
+    {`
+ <EasyDrawing areas={[office]} scatters={[person]} />
+    `}
+</Highlight>
             </div>
         }
     </Card>

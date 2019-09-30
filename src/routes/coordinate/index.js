@@ -171,7 +171,7 @@ function Preface() {
                         const person = [-77.044190,38.894836]
                     `}
                 </Highlight>
-                <red>这里需要强调的是e</red> 如你已使用的不是百度拾取坐标系统拾取的点，像谷歌、腾讯等其他的坐标系统，它们默认情况下是[latitude,longitude]格式的，所以你在使用之前需要使用  <green>‘Array.prototype.reverse()’</green>  转换一下格式,变成经度在前纬度在后的格式。
+                <red>这里需要强调的是</red> 如你使用的点不是在<a href="http://api.map.baidu.com/lbsapi/getpoint/index.html">百度拾取坐标系统 </a>中拾取，而是从谷歌、腾讯等其他系统中拾取的，那么它们默认情况下是[latitude,longitude]格式的，所以你在使用之前需要使用  <green>‘Array.prototype.reverse()’</green>  转换一下格式,变成经度在前纬度在后的格式。
             <br />
                 <br />
                 我们现简单试一下
@@ -180,7 +180,7 @@ function Preface() {
                 <img src={example} />
                 <br />
                 <br />
-                下面是一个建筑物的轮廓经纬度坐标和建筑物内部一个位置的坐标
+                下面是一个有关建筑物轮廓的经纬度坐标和建筑物内部某个位置的坐标
 
 
             <Highlight >

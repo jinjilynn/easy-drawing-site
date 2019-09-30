@@ -32,7 +32,7 @@ function Scatters(props) {
     const scatter2 = {
         point: [-77.04437, 38.894796],
         color: '#d24b5c',
-        size: 20
+        size: 40
     }
     const scatter3 = {
         point: [-77.044523, 38.894895],
@@ -61,7 +61,7 @@ function Scatters(props) {
                 This component receives six props: <em>areas</em>、<em>scatters</em>、<em>paths</em>、<em>texts</em>、<em>zIndex</em>、<em>size</em>.
             <br />
                 <br />
-                <em>areas</em>、<em>scatters</em>、<em>texts</em> and <em>paths</em> are Array types, <em>zIndex</em> is Object type and <em>size</em> is String type.
+                <em>areas</em>、<em>scatters</em>、<em>texts</em> 和 <em>paths</em> are Array types, <em>zIndex</em> is Object type and <em>size</em> is String type.
             <br />
                 <br />
                 They are responsible for rendering graphics, discrete symbols, dynamic paths, texts, setting z-index of them and size model.
@@ -190,7 +190,7 @@ const scatter4 = {
     path: {
         draw: 'stroke | fill',  /* 描边还是填充 */
         color: 'color', /* 符号颜色 */
-        scale: number || 1, /* 符号缩放大小h */
+        scale: number || 1, /* 符号缩放大小 */
         rotate: number || 0 /* 符号旋转角度 */
         d: svg-path  /* path路径 */
     }, /* 默认情况下，符号是一个圆，这里可以自定义符号的path路径 */
@@ -208,7 +208,7 @@ const scatter4 = {
         // e 的格式: { x, y, screenX, screenY }  x or y 相对于父元素的定位, screenX or screenY 相对于屏幕定位
     }, //鼠标点击事件
     pointAtCanvas: (e) => {
-        /* 回调函数，当符号在画布中渲染是调用 */
+        /* 回调函数，当符号在画布中渲染时调用 */
         /* e { x, y }  x y 表示相对于父元素定位 */
     }
 }`}         </Highlight>

@@ -32,4 +32,4 @@ export const convertToTime = function (num) {
     return result;
 }
 
-export const colors = ['#6D95FF', '#FF8888', '#FCBA71', '#52E1CB', '#966FF2', '#DD4B39', '#ED9E9E', '#EBBCB7', '#F48E4A', '#FFB652', '#F7DC00', '#C6DD84', '#4ECB73', '#76DAC4', '#4B9FA0', '#78D0DA', '#00ADD7', '#5090F4', '#425087', '#6766B3', '#965EE3', '#DD7DC1', '#ADACDC', '#CACACA', '#878B8C']
+export const colors = ['#6D95FF', '#FF8888', '#FCBA71', '#52E1CB', '#966FF2', '#DD4B39', '#ED9E9E', '#EBBCB7', '#F48E4A', '#FFB652', '#F7DC00', '#C6DD84', '#4ECB73', '#76DAC4', '#4B9FA0', '#78D0DA', '#00ADD7', '#5090F4', '#425087', '#6766B3', '#965EE3', '#DD7DC1', '#ADACDC', '#CACACA', '#878B8C', '#96281b', '#d64541', '#db0a5b', '#a537fd', '#963694', '#9a12b3', '#8e44ad', '#00b5cc', '#2574a9', '#336e7b', '#e4f1fe', '#c5eff7', '#ffff7e', '#f4d03f', '#f7ca18', '#e87e04', '#e47833']

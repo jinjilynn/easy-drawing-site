@@ -46,14 +46,14 @@ function NotFound() {
         if (it.geometry.type === 'Polygon') {
             worldAreas.push({
                 polygon: it.geometry.coordinates[0],
-                fillStyle: colors[Math.floor(Math.random() * 25)]
+                fillStyle: colors[Math.floor(Math.random() * 42)]
             })
 
         } else if (it.geometry.type === 'MultiPolygon') {
             it.geometry.coordinates.forEach(item => {
                 worldAreas.push({
                     polygon: item[0],
-                    fillStyle: colors[Math.floor(Math.random() * 25)]
+                    fillStyle: colors[Math.floor(Math.random() * 42)]
                 })
             })
         }
@@ -95,7 +95,18 @@ function NotFound() {
                     scatters={[
                         {
                             point: [60.093812, 106.937426].reverse(),
-                            color: '#fff',
+                            color: '#ffffff',
+                            size:9
+                        },
+                        {
+                            point:[58.780216, -103.509296].reverse(),
+                            color: colors[Math.floor(Math.random() * 25)],
+                            size:7
+                        },
+                        {
+                            point:[38.693563, -98.040167].reverse(),
+                            color:'black',
+                            size:9
                         }
                     ]}
                 />

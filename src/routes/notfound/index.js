@@ -36,6 +36,7 @@ import {
     scatterBld5
 } from './ruijin.js';
 import world from './world';
+import office from './office.png';
 import style from './index.less'
 function NotFound() {
     const dom = React.useRef(null);
@@ -95,18 +96,23 @@ function NotFound() {
                     scatters={[
                         {
                             point: [60.093812, 106.937426].reverse(),
-                            color: '#ffffff',
-                            size:9
+                            img:{
+                                src:office,
+                                width:30,
+                                height:30
+                            }
                         },
                         {
                             point:[58.780216, -103.509296].reverse(),
-                            color: colors[Math.floor(Math.random() * 25)],
-                            size:7
+                            color: '#fff',
+                            size:12,
+                            mode:'static'
                         },
                         {
                             point:[38.693563, -98.040167].reverse(),
                             color:'black',
-                            size:9
+                            size:12,
+                            mode:'static'
                         }
                     ]}
                 />

@@ -85,6 +85,13 @@ function Scatters(props) {
         rotate: number || 0 /* rotate of path */
         d: svg-path  /* path string */
     }, /* By default, symbol is a circle. Here you can customize the shape of the symbol through path */
+    img:{
+        src:'',
+        width: string | number,
+        height: string | number,
+        offsetX: number,
+        offsetY:number
+    },
     mouseOver: {
         color: 'color', /* color when the mouse is hovering over it */
         moveIn: (e) => {
@@ -194,6 +201,13 @@ const scatter4 = {
         rotate: number || 0 /* 符号旋转角度 */
         d: svg-path  /* path路径 */
     }, /* 默认情况下，符号是一个圆，这里可以自定义符号的path路径 */
+    img:{
+        src:'',
+        width: string | number,
+        height: string | number,
+        offsetX: number,
+        offsetY:number
+    },
     mouseOver: {
         color: 'color', /* 鼠标划过时的颜色 */
         moveIn: (e) => {

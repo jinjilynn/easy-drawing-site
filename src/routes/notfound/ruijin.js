@@ -452,5 +452,4 @@ export const scatterBld5 = {
     name: '3号楼',
     point: [121.473102, 31.218975],
     color: '#DD7DC1',
-    mode:'static'
 }

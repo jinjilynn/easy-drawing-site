@@ -7,6 +7,7 @@ import Paths from '../routes/paths';
 import ZIndex from '../routes/zindex';
 import Size from '../routes/size';
 import Texts from '../routes/texts';
+import Type from '../routes/type';
 
 export default [
     {
@@ -63,6 +64,13 @@ export default [
         icon:'ge-quanping',
         path:'/size',
         component: <Size />,
+        models:null
+    },
+    {
+        name:'geoType',
+        icon:'ge-setting',
+        path:'/type',
+        component: <Type />,
         models:null
     }
 ]
